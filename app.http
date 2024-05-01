@@ -1,0 +1,53 @@
+### create new user
+POST http://localhost:3000/new-user
+Content-Type: application/json
+
+{
+    "username":"santhi",
+    "password_hash":"santhi123"
+}
+
+### getting the user details list
+GET http://localhost:3000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRoaSIsImlhdCI6MTcxNDUzMzEzNH0.c5yGjxaR4oSlf_MzfRZBUAADotOdAlOJE523iq7wwN0
+
+### login 
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username":"santhi",
+    "password_hash":"santhi123"
+}
+
+#### deleting the user
+DELETE http://localhost:3000/delete-user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRoaSIsImlhdCI6MTcxNDUzMzEzNH0.c5yGjxaR4oSlf_MzfRZBUAADotOdAlOJE523iq7wwN0
+
+
+### creating new tasks
+POST http://localhost:3000/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRoaSIsImlhdCI6MTcxNDUzMzEzNH0.c5yGjxaR4oSlf_MzfRZBUAADotOdAlOJE523iq7wwN0
+
+{
+    "title":"Wake up at 5 clock",
+    "description":"Walk 10000 steps",
+    "status":"To be done"
+}
+
+### showing the tasks
+GET http://localhost:3000/tasks
+
+
+### update task
+PUT http://localhost:3000/tasks/2
+Content-Type: application/json
+
+{
+    "status":"Done"
+}
+
+
+### delete the task by based  on the id 
+PUT http://localhost:3000/tasks/2

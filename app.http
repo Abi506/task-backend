@@ -3,21 +3,22 @@ POST http://localhost:3000/new-user
 Content-Type: application/json
 
 {
-    "username":"santhi",
-    "password_hash":"santhi123"
+    "username":"abinandhan909",
+    "password_hash":"abinandhan"
 }
 
 ### getting the user details list
 GET http://localhost:3000/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRoaSIsImlhdCI6MTcxNDUzMzEzNH0.c5yGjxaR4oSlf_MzfRZBUAADotOdAlOJE523iq7wwN0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiaW5hbmRoYW4xOTkzIiwiaWF0IjoxNzE0NTUwMDE2fQ.ft3cfG5h_AR2v2UniiYrxmdMk5MTsui0oheN-oBEYKU
 
-### login 
+
+### user login
 POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "username":"santhi",
-    "password_hash":"santhi123"
+    "username":"abinandhan909",
+    "password_hash":"abinandhan"
 }
 
 #### deleting the user
@@ -28,26 +29,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhb
 ### creating new tasks
 POST http://localhost:3000/tasks
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRoaSIsImlhdCI6MTcxNDUzMzEzNH0.c5yGjxaR4oSlf_MzfRZBUAADotOdAlOJE523iq7wwN0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiaW5hbmRoYW45MDkiLCJpYXQiOjE3MTQ1NTA1OTd9.LvD_81qozvWb-5kmHRUPd53TgyCeG6OOtCjNEerrEA8
 
 {
-    "title":"Wake up at 5 clock",
+    "title":"Wake up a 6 clock",
     "description":"Walk 10000 steps",
     "status":"To be done"
 }
 
 ### showing the tasks
 GET http://localhost:3000/tasks
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiaW5hbmRoYW4xOTkzIiwiaWF0IjoxNzE0NTUwMTgyfQ.7QL5Wj3ZX2GdSoCi5S93ldcfI-_RiF7ttWK58YgrZok
 
 ### update task
-PUT http://localhost:3000/tasks/2
+PUT http://localhost:3000/tasks/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiaW5hbmRoYW4xOTkzIiwiaWF0IjoxNzE0NTUwMTgyfQ.7QL5Wj3ZX2GdSoCi5S93ldcfI-_RiF7ttWK58YgrZok
 Content-Type: application/json
 
 {
-    "status":"Done"
+    "status":"To be done"
 }
 
 
 ### delete the task by based  on the id 
-PUT http://localhost:3000/tasks/2
+DELETE http://localhost:3000/tasks/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiaW5hbmRoYW4xOTkzIiwiaWF0IjoxNzE0NTUwMTgyfQ.7QL5Wj3ZX2GdSoCi5S93ldcfI-_RiF7ttWK58YgrZok

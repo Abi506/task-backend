@@ -205,7 +205,7 @@ app.post('/tasks',authentication,async(request,response)=>{
 
 
 //displaying all the tasks
-app.get('/tasks',async(request,response)=>{
+app.get('/tasks',authentication,async(request,response)=>{
     
     const getTaskQuery=`
     SELECT * FROM Tasks
@@ -217,7 +217,7 @@ app.get('/tasks',async(request,response)=>{
 
 //updating the tasks by task id
 
-app.put('/tasks/:id',async(request,response)=>{
+app.put('/tasks/:id',authentication,async(request,response)=>{
     const {id}=request.params;
     const{status}=request.body
     console.log(id,'id')
@@ -251,3 +251,6 @@ app.delete("/tasks/:id",authentication,async(request,response)=>{
         response.status(500).send('Error deleting user');
     }
 })
+
+
+//delete the task based on the id

@@ -239,6 +239,7 @@ console.log(status,'status')
 app.delete("/tasks/:id",authentication,async(request,response)=>{
     const username=request.username;
     console.log(username,'username in deletion')
+    console.log('here')
     const delteUserQuery=`
     delete from users
     where username='${username}'
